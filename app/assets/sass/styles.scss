@@ -16,6 +16,7 @@ html {
   --veryDarkGray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
   --font: 'Nunito Sans', sans-serif;
+  --max-width: 1200px;
 }
 
 body {
@@ -33,6 +34,19 @@ body {
   @media only screen and (min-width: $size) {
     @content;
   }
+}
+
+/* ===== Utylities === */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 @import '_header';

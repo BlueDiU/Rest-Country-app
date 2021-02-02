@@ -19,6 +19,7 @@ html {
   --veryDarkGray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
   --font: 'Nunito Sans', sans-serif;
+  --max-width: 1200px;
 }
 
 body {
@@ -30,6 +31,18 @@ body {
 #root {
   margin: 0;
   padding: 0;
+}
+
+/* ===== Utylities === */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .main-header {
@@ -56,7 +69,7 @@ body {
 .main-header__title {
   color: var(--white);
   letter-spacing: 1px;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
 }
 
 @media only screen and (min-width: 1024px) {
