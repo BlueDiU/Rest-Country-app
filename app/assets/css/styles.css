@@ -20,12 +20,14 @@ html {
   --white: hsl(0, 0%, 100%);
   --font: 'Nunito Sans', sans-serif;
   --max-width: 1200px;
+  --shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
   font-family: var(--font);
+  background-color: var(--veryDarkBlue);
 }
 
 #root {
@@ -106,4 +108,67 @@ img {
   font-size: 1.3rem;
   color: var(--white);
   font-weight: 600;
+}
+
+.main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1.7rem 1rem;
+  width: 100%;
+}
+
+.main-section .main-form__search {
+  background-color: var(--darkBlue);
+  padding: 2.4rem 2.5rem;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  font-size: 1.5rem;
+  color: var(--white);
+  caret-color: var(--white);
+  font-weight: 200;
+  height: 40px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.main-section .main-form__search::-webkit-input-placeholder {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.main-section .main-form__search:-ms-input-placeholder {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.main-section .main-form__search::-ms-input-placeholder {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.main-section .main-form__search::placeholder {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.main-section .main-select {
+  background-color: var(--darkBlue);
+  border: 0;
+  outline: 0;
+  color: var(--white);
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  width: 50%;
+  padding: 1.2rem 2rem;
+  border-radius: 4px;
 }

@@ -3,9 +3,9 @@ export function SearchForm() {
     $input = document.createElement('input');
   // form
   $form.classList.add('main-form');
-  $input.classList.add('main-form-search');
+  $input.classList.add('main-form__search');
   // input
-  $input.placeholder = 'Search for a country... ';
+  $input.placeholder = '🔍 Search for a country... ';
   $input.type = 'search';
 
   $form.appendChild($input);

@@ -1,0 +1,41 @@
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.7rem 1rem;
+  width: 100%;
+
+  .main-form {
+    &__search {
+      background-color: var(--darkBlue);
+      padding: 2.4rem 2.5rem;
+      box-shadow: var(--shadow);
+      font-size: 1.5rem;
+      color: var(--white);
+      caret-color: var(--white);
+      font-weight: 200;
+      height: 40px;
+      width: 100%;
+      border: 0;
+      outline: 0;
+      border-radius: 5px;
+    }
+
+    &__search::placeholder {
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+  }
+
+  .main-select {
+    background-color: var(--darkBlue);
+    border: 0;
+    outline: 0;
+    color: var(--white);
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    width: 50%;
+    padding: 1.2rem 2rem;
+    border-radius: 4px;
+  }
+}
