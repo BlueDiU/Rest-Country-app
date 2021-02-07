@@ -5,7 +5,14 @@
   padding: 1.7rem 1rem;
   width: 100%;
 
+  @include mq(1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .main-form {
+    width: 100%;
     &__search {
       background-color: var(--darkBlue);
       padding: 2.4rem 2.5rem;
@@ -19,15 +26,25 @@
       border: 0;
       outline: 0;
       border-radius: 5px;
+
+      @include mq(1024px) {
+        width: 50rem;
+        height: 50px;
+      }
     }
 
     &__search::placeholder {
       color: var(--white);
       font-size: 1.5rem;
     }
+
+    @include mq(1024px) {
+      width: 70%;
+    }
   }
 
   .main-select {
+    cursor: pointer;
     background-color: var(--darkBlue);
     border: 0;
     outline: 0;
@@ -37,5 +54,11 @@
     width: 50%;
     padding: 1.2rem 2rem;
     border-radius: 4px;
+    box-shadow: var(--shadow);
+
+    @include mq(1024px) {
+      margin-top: 0;
+      width: 16%;
+    }
   }
 }

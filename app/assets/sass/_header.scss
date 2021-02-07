@@ -4,9 +4,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.2rem;
+  box-shadow: var(--shadow);
 
   @include mq(1024px) {
-    padding: 1rem 4rem;
+    margin-bottom: 2.7rem;
+    padding: 0.4rem 4rem;
   }
   background-color: var(--darkBlue);
 

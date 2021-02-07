@@ -38,6 +38,12 @@ body {
   }
 }
 
+/* ===== Components ======= */
+
+@import '_header';
+@import '_section';
+@import '_card';
+
 /* ===== Utylities === */
 
 .container {
@@ -51,5 +57,9 @@ img {
   height: auto;
 }
 
-@import '_header';
-@import '_section';
+.loader {
+  margin: 1rem auto;
+  display: block;
+  width: 8.7rem;
+  height: 8.7rem;
+}

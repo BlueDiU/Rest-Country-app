@@ -9,7 +9,7 @@ export async function Router() {
 
   let {hash} = location;
 
-  /* if (!hash || hash === '/#') {
+  if (!hash || hash === '/#') {
     await ajax({
       url: api.ALL,
       cbSuccess: (countries) => {
@@ -23,5 +23,7 @@ export async function Router() {
         $main.appendChild($fragment);
       },
     });
-  } */
+  }
+
+  d.querySelector('.loader').style.display = 'none';
 }
