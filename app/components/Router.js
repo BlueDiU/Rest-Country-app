@@ -63,5 +63,6 @@ export async function Router() {
       },
     });
   }
+
   d.querySelector('.loader').style.display = 'none';
 }
