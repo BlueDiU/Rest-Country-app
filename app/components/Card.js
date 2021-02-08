@@ -1,3 +1,5 @@
+import {populationFormat} from '../helpers/populationFormat.js';
+
 export function Card(props) {
   let {flag, name, population, capital, region} = props;
 
@@ -13,7 +15,7 @@ export function Card(props) {
       <section class="country-info">
           <div class="country-info__text">
             <span class="country-info__bold">Population:</span>
-            ${population} 
+            ${populationFormat(population.toString())} 
           </div> 
           <div class="country-info__text">
             <span class="country-info__bold">Region:</span> ${region}

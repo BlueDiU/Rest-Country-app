@@ -14,5 +14,11 @@ export function Header() {
   </button>
   `;
 
+  document.addEventListener('click', (e) => {
+    if (e.target.matches('.main-header__title')) {
+      location.hash = '';
+    }
+  });
+
   return $header;
 }

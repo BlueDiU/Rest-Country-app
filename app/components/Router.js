@@ -15,9 +15,28 @@ export async function Router() {
       cbSuccess: (countries) => {
         const $fragment = document.createDocumentFragment();
 
-        let html = '';
         countries.forEach((country) => {
           $fragment.appendChild(Card(country));
+        });
+
+        $main.appendChild($fragment);
+      },
+    });
+  } else if (hash.includes('#/search')) {
+    let query = localStorage.getItem('seachCountry');
+
+    if (!query) {
+      d.querySelector('.loader').style.display = 'none';
+      return false;
+    }
+
+    await ajax({
+      url: `${api.BY_NAME}${query}`,
+      cbSuccess: (search) => {
+        const $fragment = document.createDocumentFragment();
+
+        search.forEach((name) => {
+          $fragment.appendChild(Card(name));
         });
 
         $main.appendChild($fragment);

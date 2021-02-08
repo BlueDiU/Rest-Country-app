@@ -11,6 +11,14 @@
     align-items: center;
   }
 
+  @include mq(1024px) {
+    padding-bottom: 5.5rem;
+  }
+
+  @include mq(350px) {
+    padding-bottom: 5rem;
+  }
+
   .main-form {
     width: 100%;
     &__search {
