@@ -42,7 +42,26 @@ export async function Router() {
         $main.appendChild($fragment);
       },
     });
-  }
+  } else if (hash.includes('#/filter')) {
+    let query = localStorage.getItem('searchRegion');
 
+    if (!query) {
+      d.querySelector('.loader').style.display = 'none';
+      return false;
+    }
+
+    await ajax({
+      url: `${api.BY_REGION}${query}`,
+      cbSuccess: (filter) => {
+        const $fragment = document.createDocumentFragment();
+
+        filter.forEach((name) => {
+          $fragment.appendChild(Card(name));
+        });
+
+        $main.appendChild($fragment);
+      },
+    });
+  }
   d.querySelector('.loader').style.display = 'none';
 }
