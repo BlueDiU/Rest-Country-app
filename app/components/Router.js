@@ -1,6 +1,8 @@
-import {ajax} from '../helpers/ajax.js';
 import api from '../helpers/restcountries-api.js';
+import {ajax} from '../helpers/ajax.js';
 import {Card} from './Card.js';
+import {getSelectCountryByName} from '../helpers/getSelectCountryByName.js';
+import {Details} from './Details.js';
 
 export async function Router() {
   const d = document,
@@ -9,18 +11,8 @@ export async function Router() {
 
   let {hash} = location;
 
-  d.addEventListener('click', (e) => {
-    if (!e.target.matches('.country-card__img')) return false;
-
-    const reference = d.querySelector('.country-card__title');
-    const pur = e.target;
-
-    localStorage.setItem('selectCountry', 'spain');
-
-    console.log(pur.getAttribute('data-name'));
-
-    //location.href = `#/details`;
-  });
+  // get select country by data-name
+  getSelectCountryByName();
 
   if (!hash || hash === '/#') {
     await ajax({
@@ -76,7 +68,17 @@ export async function Router() {
       },
     });
   } else {
-    $main.innerHTML = 'Detalles';
+    let query = localStorage.getItem('selectCountry');
+
+    console.log(query);
+
+    await ajax({
+      url: `${api.BY_NAME}${query}`,
+      cbSuccess: (details) => {
+        console.log(details);
+        $main.innerHTML = Details(details[0]);
+      },
+    });
   }
 
   d.querySelector('.loader').style.display = 'none';
