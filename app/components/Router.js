@@ -9,6 +9,19 @@ export async function Router() {
 
   let {hash} = location;
 
+  d.addEventListener('click', (e) => {
+    if (!e.target.matches('.country-card__img')) return false;
+
+    const reference = d.querySelector('.country-card__title');
+    const pur = e.target;
+
+    localStorage.setItem('selectCountry', 'spain');
+
+    console.log(pur.getAttribute('data-name'));
+
+    //location.href = `#/details`;
+  });
+
   if (!hash || hash === '/#') {
     await ajax({
       url: api.ALL,
@@ -62,6 +75,8 @@ export async function Router() {
         $main.appendChild($fragment);
       },
     });
+  } else {
+    $main.innerHTML = 'Detalles';
   }
 
   d.querySelector('.loader').style.display = 'none';
