@@ -7,7 +7,7 @@ export function Card(props) {
   $article.classList.add('country-card');
 
   $article.innerHTML = `
-  <img src="${flag}" alt="${name.toLowerCase()}" class="country-card__img"
+  <img class="country-card__img" src="${flag}" alt="${name.toLowerCase()}" 
   data-name="${name}">
  
     <div class="country-card__container">

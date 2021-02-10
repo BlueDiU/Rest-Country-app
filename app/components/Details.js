@@ -20,28 +20,30 @@ export function Details(props) {
     langName += `${languages[i].name}${languages[i] ? ' ' : ''}`;
   }
 
-  return `
-  <article class="details-card container">
-    <img src="${flag}" alt="${name.toLowerCase()}  class="details-card__img">
+  console.log(borders.length);
 
-    <section class="details-container">
-        <h3 class="details-container__name">${name}</h3>
+  return `
+  <article class="details-card">
+    <img class="details-card__img" src="${flag}" alt="${name.toLowerCase()}/>
+
+    <section class="details-info">
+        <h3 class="details-info__name">${name}</h3>
 
         <div class="details-info__group-1">
             <p class="details-info__text">
-                <span class="details-info__bold">Native Name:</span> ${nativeName}
+              <span class="details-info__bold">Native Name:</span> ${nativeName}
             </p> 
             <p class="details-info__text">
-                <span class="details-info__bold">Population:</span> ${population}
+              <span class="details-info__bold">Population:</span> ${population}
             </p> 
             <p class="details-info__text">
-                <span class="details-info__bold">Region:</span> ${region}
+              <span class="details-info__bold">Region:</span> ${region}
             </p> 
             <p class="details-info__text">
-                <span class="details-info__bold">Sub Region:</span> ${subregion}
+              <span class="details-info__bold">Sub Region:</span> ${subregion}
             </p> 
             <p class="details-info__text">
-                <span class="details-info__bold">Capital:</span> ${capital}
+              <span class="details-info__bold">Capital:</span> ${capital}
             </p> 
         </div>
 
@@ -60,11 +62,25 @@ export function Details(props) {
                 <span class="details-info__bold">Languages:</span> 
                ${langName.trimEnd().replaceAll(' ', ', ')}
             </p> 
-             
         </div>
 
         <div class="details-info__group-3">
+          <h5 class="group-3__title">Border Countries</h5>
+          <div class="group-3__container">
+              <div class="group-3__box">
+                ${borders.length > 0 ? borders[0] : '❌'}
+              </div>
+
+              <div class="group-3__box">
+              ${borders.length > 0 ? borders[1] : '❌'}
+              </div>
+
+              <div class="group-3__box">
+              ${borders.length > 0 ? (borders[2] ? borders[2] : '❌') : '❌'}
+              </div>
+          </div>
         </div>
+
     </section>
   </article>
   `;

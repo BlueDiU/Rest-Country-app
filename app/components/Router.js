@@ -71,7 +71,7 @@ export async function Router() {
     let query = localStorage.getItem('selectCountry');
 
     console.log(query);
-
+    document.querySelector('main').classList.remove('country-card-grid');
     await ajax({
       url: `${api.BY_NAME}${query}`,
       cbSuccess: (details) => {
