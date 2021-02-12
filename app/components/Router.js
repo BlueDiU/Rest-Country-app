@@ -6,7 +6,6 @@ import {Details} from './Details.js';
 
 export async function Router() {
   const d = document,
-    w = window,
     $main = d.getElementById('main');
 
   let {hash} = location;
