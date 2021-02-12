@@ -1,3 +1,5 @@
+import {populationFormat} from '../helpers/populationFormat.js';
+
 export function Details(props) {
   let {
     flag,
@@ -20,9 +22,9 @@ export function Details(props) {
     langName += `${languages[i].name}${languages[i] ? ' ' : ''}`;
   }
 
-  console.log(borders.length);
-
   return `
+  <a class="back-btn" href="#">&larr; Back</a>
+  
   <article class="details-card">
     <img class="details-card__img" src="${flag}" alt="${name.toLowerCase()}/>
 
@@ -34,7 +36,9 @@ export function Details(props) {
               <span class="details-info__bold">Native Name:</span> ${nativeName}
             </p> 
             <p class="details-info__text">
-              <span class="details-info__bold">Population:</span> ${population}
+              <span class="details-info__bold">Population:</span> ${populationFormat(
+                population.toString()
+              )}
             </p> 
             <p class="details-info__text">
               <span class="details-info__bold">Region:</span> ${region}
@@ -65,7 +69,7 @@ export function Details(props) {
         </div>
 
         <div class="details-info__group-3">
-          <h5 class="group-3__title">Border Countries</h5>
+          <h5 class="group-3__title">Border Countries: </h5>
           <div class="group-3__container">
               <div class="group-3__box">
                 ${borders.length > 0 ? borders[0] : '❌'}

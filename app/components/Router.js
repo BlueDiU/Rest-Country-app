@@ -70,12 +70,12 @@ export async function Router() {
   } else {
     let query = localStorage.getItem('selectCountry');
 
-    console.log(query);
     document.querySelector('main').classList.remove('country-card-grid');
+    document.querySelector('section.main-section').style.display = 'none';
+
     await ajax({
       url: `${api.BY_NAME}${query}`,
       cbSuccess: (details) => {
-        console.log(details);
         $main.innerHTML = Details(details[0]);
       },
     });
