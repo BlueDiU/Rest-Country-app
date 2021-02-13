@@ -1,0 +1,57 @@
+.light-mode {
+  background-color: var(--white);
+  color: var(--veryDarkBlueText);
+
+  .main-header {
+    background-color: var(--white);
+    &__title {
+      color: var(--veryDarkBlueText);
+    }
+
+    .main-button {
+      &__text {
+        color: var(--veryDarkBlueText);
+      }
+    }
+  }
+
+  .main-section {
+    .main-form {
+      &__search {
+        background-color: var(--white);
+        color: var(--veryDarkBlueText);
+        caret-color: var(--veryDarkBlueText);
+      }
+
+      &__search::placeholder {
+        color: var(--veryDarkBlueText);
+      }
+    }
+
+    .main-select {
+      background-color: var(--white);
+      color: var(--veryDarkBlueText);
+    }
+  }
+
+  .country-card {
+    background-color: var(--white);
+    color: var(--veryDarkBlueText);
+  }
+
+  .back-btn {
+    background-color: var(--white);
+    color: var(--veryDarkBlueText);
+  }
+
+  .details-info {
+    &__group-3 {
+      .group-3__box {
+        background-color: var(--white);
+        color: var(--veryDarkBlueText);
+      }
+    }
+  }
+}
+
+//.light-mode

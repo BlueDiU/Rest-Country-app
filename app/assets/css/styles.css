@@ -37,6 +37,65 @@ body {
 }
 
 /* ===== Components ======= */
+.light-mode {
+  background-color: var(--white);
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .main-header {
+  background-color: var(--white);
+}
+
+.light-mode .main-header__title {
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .main-header .main-button__text {
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .main-section .main-form__search {
+  background-color: var(--white);
+  color: var(--veryDarkBlueText);
+  caret-color: var(--veryDarkBlueText);
+}
+
+.light-mode .main-section .main-form__search::-webkit-input-placeholder {
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .main-section .main-form__search:-ms-input-placeholder {
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .main-section .main-form__search::-ms-input-placeholder {
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .main-section .main-form__search::placeholder {
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .main-section .main-select {
+  background-color: var(--white);
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .country-card {
+  background-color: var(--white);
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .back-btn {
+  background-color: var(--white);
+  color: var(--veryDarkBlueText);
+}
+
+.light-mode .details-info__group-3 .group-3__box {
+  background-color: var(--white);
+  color: var(--veryDarkBlueText);
+}
+
 .main-header {
   width: 100%;
   display: -webkit-box;
